@@ -1,0 +1,108 @@
+<form [formGroup]="formGroupEspecies" (ngSubmit)="crear" autocomplete="off">
+
+  <div class="grid">
+    <div class="p-field lg:col-3 md:col-2 ml-8 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="especie" [options]="especies" [autoDisplayFirst]="false" formControlName="especie"></p-dropdown>
+        <label for="especie">Especies</label>
+      </span>
+    </div>
+    <div class="p-field lg:col-3 md:col-2 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="familia" [options]="familias" [autoDisplayFirst]="false" formControlName="especie"></p-dropdown>
+        <label for="familia">Familias</label>
+      </span>
+    </div>
+    <div class="p-field lg:col-3 md:col-2">
+      <span class="p-float-label">
+        <input formControlName="nombreComun" id="nombreComun" type="text" pInputText>
+        <label for="nombreComun">Nombre común</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="grid mt-2">
+    <div class="p-field lg:col-3 md:col-2 ml-8 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="proyecto" [options]="proyectos" [autoDisplayFirst]="false" formControlName="proyecto"></p-dropdown>
+        <label for="proyecto">Proyectos</label>
+      </span>
+    </div>
+    <div class="p-field p-field lg:col-3 md:col-2 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="baseRegistro" [options]="baseRegistros" [autoDisplayFirst]="false" formControlName="especie"></p-dropdown>
+        <label for="baseRegistro">Base del Registro</label>
+      </span>
+    </div>
+    <div class="p-field lg:col-3 md:col-2">
+      <span class="p-float-label">
+        <input formControlName="identificador" id="identificador" type="text" pInputText>
+        <label for="identificador">Identificador</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="grid mt-2">
+    <div class="p-field lg:col-3 md:col-2 ml-8 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="departamento" [options]="departamentos" [autoDisplayFirst]="false" formControlName="departamento"></p-dropdown>
+        <label for="departamento">Departamentos</label>
+      </span>
+    </div>
+    <div class="p-field p-field lg:col-3 md:col-2 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="municipio" [options]="municipios" [autoDisplayFirst]="false" formControlName="especie"></p-dropdown>
+        <label for="municipio">Municipios</label>
+      </span>
+    </div>
+    <div class="p-field p-field lg:col-3 md:col-2">
+      <span class="p-float-label">
+        <p-dropdown inputId="localidad" [options]="localidades" [autoDisplayFirst]="false" formControlName="especie"></p-dropdown>
+        <label for="localidad">Localidades</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="grid mt-2">
+    <div class="p-field lg:col-3 md:col-2 ml-8 mr-7">
+      <span class="p-float-label">
+        <input formControlName="latitud" id="latitud" type="text" pInputText>
+        <label for="latitud">Latitud</label>
+      </span>
+    </div>
+    <div class="p-field p-field lg:col-3 md:col-2 mr-7">
+      <span class="p-float-label">
+        <input formControlName="longitud" id="longitud" type="text" pInputText>
+        <label for="longitud">Longitud</label>
+      </span>
+    </div>
+    <div class="p-field p-field lg:col-3 md:col-2">
+      <span class="p-float-label">
+        <input formControlName="autor" id="autor" type="text" pInputText>
+        <label for="autor">Autor</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="grid mt-2">
+    <div class="p-field lg:col-3 md:col-2 ml-8 mr-7">
+      <span class="p-float-label">
+        <p-calendar inputId="fechaCaptura" formControlName="fechaCaptura"></p-calendar>
+        <label for="fechaCaptura"> Fecha de captura</label>
+      </span>
+    </div>
+    <div class="p-field p-field lg:col-3 md:col-2 mr-7">
+      <span class="p-float-label">
+        <p-dropdown inputId="ecoRregion" [options]="ecoRregiones" [autoDisplayFirst]="false" formControlName="especie"></p-dropdown>
+        <label for="ecoRregion">Ecoregiones</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="flex justify-content-center mt-6">
+    <div class="flex align-items-center justify-content-center ">
+      <button pButton type="submit" label="Guardar" (click)="crear()"></button>
+    </div>
+  </div>
+
+</form>
